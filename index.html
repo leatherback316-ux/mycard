@@ -1,3 +1,12 @@
+네, 알겠습니다! 마음이 바뀌실 수 있죠. QR 코드를 다시 넣는 것은 아주 간단합니다.
+
+아까 뺐던 코드 부분을 다시 제자리에 넣어주기만 하면 됩니다. 헷갈리시지 않게 QR 코드가 다시 포함된 전체 완성 코드를 아래에 준비했습니다.
+
+이 코드를 그대로 복사해서, GitHub의 index.html 파일 내용을 모두 지우고 새로 붙여넣으시면 됩니다.
+
+🛠 QR 코드가 다시 추가된 최종 코드
+HTML
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -15,22 +24,27 @@
         .top-bar { height: 12px; background: linear-gradient(90deg, #1a3a5a, #4a9092); }
         
         /* 로고 영역 */
-        .logo-container { margin-top: 40px; margin-bottom: 20px; }
-        .logo-container img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 3px solid #f0f2f5; }
+        .logo-container { margin-top: 35px; margin-bottom: 20px; }
+        .logo-container img { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 3px solid #f0f2f5; }
 
         /* 텍스트 정보 */
         .company-name { font-size: 14px; color: #4a9092; letter-spacing: 2px; margin-bottom: 8px; font-weight: 600; }
-        .name { font-size: 28px; font-weight: 800; color: #1a3a5a; margin: 5px 0; }
-        .title { font-size: 16px; color: #555; font-weight: 500; margin-bottom: 35px; }
+        .name { font-size: 26px; font-weight: 800; color: #1a3a5a; margin: 5px 0; }
+        .title { font-size: 16px; color: #555; font-weight: 500; margin-bottom: 30px; }
         
         /* 연락처 정보 영역 */
-        .info-section { text-align: left; padding: 0 35px; margin-bottom: 35px; }
-        .info-item { display: flex; align-items: center; margin-bottom: 18px; font-size: 15px; color: #333; text-decoration: none; transition: color 0.2s; }
+        .info-section { text-align: left; padding: 0 35px; margin-bottom: 25px; }
+        .info-item { display: flex; align-items: center; margin-bottom: 15px; font-size: 15px; color: #333; text-decoration: none; transition: color 0.2s; }
         .info-item:hover { color: #4a9092; }
-        .info-item i { width: 24px; color: #4a9092; margin-right: 12px; text-align: center; font-size: 18px; }
+        .info-item i { width: 24px; color: #4a9092; margin-right: 10px; text-align: center; font-size: 18px; }
+
+        /* QR 코드 영역 (다시 추가됨) */
+        .qr-code-section { margin: 30px 0 20px; text-align: center; }
+        .qr-code-section img { width: 140px; height: 140px; border: 2px solid #f0f0f0; border-radius: 12px; padding: 5px; background: white; }
+        .qr-info-text { font-size: 13px; color: #888; margin-top: 8px; }
 
         /* 유튜브 버튼 */
-        .btn-youtube { display: inline-flex; align-items: center; background-color: #ff0000; color: white; padding: 14px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 16px; transition: 0.3s; box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2); }
+        .btn-youtube { display: inline-flex; align-items: center; background-color: #ff0000; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 15px; transition: 0.3s; box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2); }
         .btn-youtube:hover { background-color: #cc0000; box-shadow: 0 6px 15px rgba(255, 0, 0, 0.3); transform: translateY(-2px); }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -56,8 +70,13 @@
             </a>
         </div>
 
+        <div class="qr-code-section">
+            <img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https://www.youtube.com/@장수거북-5" alt="유튜브 채널 QR코드">
+            <div class="qr-info-text">카메라로 스캔하여 채널 방문</div>
+        </div>
+
         <a href="https://www.youtube.com/@장수거북-5" target="_blank" class="btn-youtube">
-            <i class="fab fa-youtube" style="margin-right: 8px;"></i> YouTube 채널 방문하기
+            <i class="fab fa-youtube" style="margin-right: 8px;"></i> YouTube 바로가기
         </a>
     </div>
 </body>
