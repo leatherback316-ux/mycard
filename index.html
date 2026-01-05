@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장수거Book_최현열_명함</title>
+    <style>
+        /* 기본 폰트 및 배경 설정 */
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        body { font-family: 'Pretendard', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background-color: #f0f2f5; }
+        
+        /* 명함 카드 디자인 */
+        .card { background: white; width: 320px; border-radius: 24px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); overflow: hidden; text-align: center; padding-bottom: 40px; transition: transform 0.3s ease; }
+        /* 상단 컬러 바 */
+        .top-bar { height: 12px; background: linear-gradient(90deg, #1a3a5a, #4a9092); }
+        
+        /* 로고 영역 */
+        .logo-container { margin-top: 35px; margin-bottom: 20px; }
+        /* 실제 사용 시 아래 주석을 해제하고 로고 이미지 경로를 넣으세요. 현재는 예시 이미지입니다. */
+        /* .logo-container img { width: 130px; height: auto; } */
+        /* 로고 자리가 비어보이지 않게 임시로 넣은 박스입니다. 로고 이미지 적용 시 이 박스는 지우세요. */
+        .logo-placeholder { width: 130px; height: 130px; background-color: #e0e0e0; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: #666; font-size: 14px; }
+
+        /* 텍스트 정보 */
+        .company-name { font-size: 14px; color: #4a9092; letter-spacing: 2px; margin-bottom: 8px; font-weight: 600; }
+        .name { font-size: 26px; font-weight: 800; color: #1a3a5a; margin: 5px 0; }
+        .title { font-size: 16px; color: #555; font-weight: 500; margin-bottom: 30px; }
+        
+        /* 연락처 정보 영역 */
+        .info-section { text-align: left; padding: 0 35px; margin-bottom: 25px; }
+        .info-item { display: flex; align-items: center; margin-bottom: 15px; font-size: 15px; color: #333; text-decoration: none; transition: color 0.2s; }
+        .info-item:hover { color: #4a9092; }
+        .info-item span.label { margin-right: 15px; font-weight: 700; color: #1a3a5a; width: 60px; }
+        .info-item i { width: 24px; color: #4a9092; margin-right: 10px; text-align: center; }
+
+        /* QR 코드 영역 (추가됨) */
+        .qr-code-section { margin: 30px 0 20px; text-align: center; }
+        .qr-code-section img { width: 140px; height: 140px; border: 2px solid #f0f0f0; border-radius: 12px; padding: 5px; background: white; }
+        .qr-info-text { font-size: 13px; color: #888; margin-top: 8px; }
+
+        /* 유튜브 버튼 */
+        .btn-youtube { display: inline-flex; align-items: center; background-color: #ff0000; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 15px; transition: 0.3s; box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2); }
+        .btn-youtube:hover { background-color: #cc0000; box-shadow: 0 6px 15px rgba(255, 0, 0, 0.3); transform: translateY(-2px); }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="card">
+        <div class="top-bar"></div>
+        <div class="logo-container">
+            <img src="로고파일이름.png" style="width:130px; border-radius:50%;">
+        </div>
+        <div class="company-name">장수거Book</div>
+        <div class="name">최현열</div>
+        <div class="title">디렉터</div>
+        
+        <div class="info-section">
+            <a href="tel:010-5588-8503" class="info-item">
+                <i class="fas fa-phone-alt"></i>
+                010-5588-8503
+            </a>
+            <a href="mailto:leatherback316@gmail.com" class="info-item">
+                <i class="fas fa-envelope"></i>
+                leatherback316@gmail.com
+            </a>
+        </div>
+
+        <div class="qr-code-section">
+            <img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https://www.youtube.com/@장수거북-5" alt="유튜브 채널 QR코드">
+            <div class="qr-info-text">카메라로 스캔하여 채널 방문</div>
+        </div>
+
+        <a href="https://www.youtube.com/@장수거북-5" target="_blank" class="btn-youtube">
+            <i class="fab fa-youtube" style="margin-right: 8px;"></i> YouTube 바로가기
+        </a>
+    </div>
+</body>
+</html>
