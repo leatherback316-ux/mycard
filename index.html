@@ -1,3 +1,12 @@
+최현열 디렉터님, 보내주신 코드를 확인해 보니 두 가지 주요한 이유 때문에 로고가 보이지 않았던 것으로 보입니다.
+
+첫째, <style> 태그 안에 잘못된 코드가 들어가 있었고, 둘째, 실제 이미지를 불러오는 부분의 파일 이름이 여전히 예시용 이름(로고파일이름.png)으로 되어 있었습니다.
+
+문제가 되었던 부분들을 완벽하게 수정한 최종 코드를 드립니다. 이 코드를 복사해서 기존 GitHub의 index.html 내용과 교체해 주세요.
+
+🛠 수정된 최종 코드
+HTML
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -16,10 +25,8 @@
         
         /* 로고 영역 */
         .logo-container { margin-top: 35px; margin-bottom: 20px; }
-        /* 실제 사용 시 아래 주석을 해제하고 로고 이미지 경로를 넣으세요. 현재는 예시 이미지입니다. */
-        /* .logo-container img { width: 130px; height: auto; } */
-        /* 로고 자리가 비어보이지 않게 임시로 넣은 박스입니다. 로고 이미지 적용 시 이 박스는 지우세요. */
-        .img src="ChatGPT Image 2025년 12월 25일 오후 09_04_31" style="width:130px; border-radius:50%; margin-top:35px;"
+        .logo-container img { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; }
+
         /* 텍스트 정보 */
         .company-name { font-size: 14px; color: #4a9092; letter-spacing: 2px; margin-bottom: 8px; font-weight: 600; }
         .name { font-size: 26px; font-weight: 800; color: #1a3a5a; margin: 5px 0; }
@@ -29,10 +36,9 @@
         .info-section { text-align: left; padding: 0 35px; margin-bottom: 25px; }
         .info-item { display: flex; align-items: center; margin-bottom: 15px; font-size: 15px; color: #333; text-decoration: none; transition: color 0.2s; }
         .info-item:hover { color: #4a9092; }
-        .info-item span.label { margin-right: 15px; font-weight: 700; color: #1a3a5a; width: 60px; }
         .info-item i { width: 24px; color: #4a9092; margin-right: 10px; text-align: center; }
 
-        /* QR 코드 영역 (추가됨) */
+        /* QR 코드 영역 */
         .qr-code-section { margin: 30px 0 20px; text-align: center; }
         .qr-code-section img { width: 140px; height: 140px; border: 2px solid #f0f0f0; border-radius: 12px; padding: 5px; background: white; }
         .qr-info-text { font-size: 13px; color: #888; margin-top: 8px; }
@@ -47,7 +53,7 @@
     <div class="card">
         <div class="top-bar"></div>
         <div class="logo-container">
-            <img src="로고파일이름.png" style="width:130px; border-radius:50%;">
+            <img src="ChatGPT Image 2025년 12월 25일 오후 09_04_31.jpg" alt="장수거Book 로고">
         </div>
         <div class="company-name">장수거Book</div>
         <div class="name">최현열</div>
@@ -74,5 +80,4 @@
         </a>
     </div>
 </body>
-
 </html>
